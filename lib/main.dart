@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'dashboard.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -63,7 +65,12 @@ class StartScreen extends StatelessWidget {
         FittedBox(
           child: GestureDetector(
             onTap: () {
-              print('hi');
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) {
+                  return DashBoard();
+                }),
+              );
             },
             child: Container(
               padding: EdgeInsets.symmetric(horizontal: 25.0, vertical: 15.0),
